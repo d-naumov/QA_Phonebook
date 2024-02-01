@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.phonebook.tests.AddContactTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-01-28T12:15:10" hostname="DESKTOP-I9KM9G6" time="82.981">
+  <properties/>
+  <testcase name="addContactPositiveFromDataProviderTest[0](Oliver, Kan, 1234567890, kan@gm.com, Berlin, goalkeeper)" classname="com.phonebook.tests.AddContactTests" time="2.012"/>
+  <testcase name="addContactPositiveFromDataProviderTest[1](Oliver1, Kan, 1234567890, kan@gm.com, Berlin, goalkeeper)" classname="com.phonebook.tests.AddContactTests" time="1.175"/>
+  <testcase name="addContactPositiveFromDataProviderTest[2](Oliver2, Kan, 1234567890, kan@gm.com, Berlin, goalkeeper)" classname="com.phonebook.tests.AddContactTests" time="1.263"/>
+  <testcase name="addContactPositiveFromDataProviderWithCSVTest[0](com.phonebook.models.Contact@5dcd0cdf)" classname="com.phonebook.tests.AddContactTests" time="0.814"/>
+  <testcase name="addContactPositiveFromDataProviderWithCSVTest[1](com.phonebook.models.Contact@422ab737)" classname="com.phonebook.tests.AddContactTests" time="0.781"/>
+  <testcase name="addContactPositiveFromDataProviderWithCSVTest[2](com.phonebook.models.Contact@6aa5974e)" classname="com.phonebook.tests.AddContactTests" time="0.779"/>
+  <testcase name="addContactPositiveFromDataProviderWithCSVTest[3](com.phonebook.models.Contact@712e787e)" classname="com.phonebook.tests.AddContactTests" time="0.861"/>
+  <testcase name="addContactPositiveTest" classname="com.phonebook.tests.AddContactTests" time="1.147"/>
+  <system-out><![CDATA[13:15:09.685 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveFromDataProviderTest
+13:15:12.109 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveFromDataProviderTest
+13:15:12.110 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:15:12.110 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+13:15:12.111 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveFromDataProviderTest
+13:15:23.739 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveFromDataProviderTest
+13:15:23.741 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:15:23.741 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+13:15:23.742 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveFromDataProviderTest
+13:15:35.399 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveFromDataProviderTest
+13:15:35.399 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:15:35.399 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+13:15:35.402 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveFromDataProviderWithCSVTest
+13:15:46.915 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveFromDataProviderWithCSVTest
+13:15:46.915 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:15:46.915 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+13:15:46.916 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveFromDataProviderWithCSVTest
+13:15:58.366 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveFromDataProviderWithCSVTest
+13:15:58.366 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:15:58.366 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+13:15:58.367 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveFromDataProviderWithCSVTest
+13:16:10.022 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveFromDataProviderWithCSVTest
+13:16:10.022 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:16:10.022 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+13:16:10.023 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveFromDataProviderWithCSVTest
+13:16:21.583 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveFromDataProviderWithCSVTest
+13:16:21.583 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:16:21.583 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+13:16:21.585 [Test worker] INFO  com.phonebook.tests.TestBase -- Start testaddContactPositiveTest
+13:16:33.041 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveTest
+13:16:33.041 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+13:16:33.041 [Test worker] INFO  com.phonebook.tests.TestBase -- **************************************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
