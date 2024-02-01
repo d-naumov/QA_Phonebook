@@ -1,32 +1,53 @@
 package com.phonebook.tests;
 
-import java.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.phonebook.fw.ApplicationManager;
+
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import org.openqa.selenium.remote.Browser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
 
-  WebDriver driver;
+  protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser",
+      Browser.CHROME.browserName()));
+
+  Logger logger = LoggerFactory.getLogger(TestBase.class);
 
   @BeforeMethod
+  public void startTest(Method method, Object[] p) {
+    logger.info(" Start test " + method.getName() + " with data: " + Arrays.asList(p));
+  }
+
+  @AfterMethod
+  public void stopTest(ITestResult result) {
+    if (result.isSuccess()) {
+      logger.info("PASSED: " + result.getMethod().getMethodName());
+    } else {
+      logger.error(
+          "FAILED: " + result.getMethod().getMethodName() + " Screenshot: " + app.getHomepage()
+              .takeScreenshot());
+    }
+    logger.info("Stop test ");
+    logger.info("**************************************************");
+  }
+
+  @BeforeSuite
   public void setup() {
-    driver = new ChromeDriver();
-    driver.get("https://telranedu.web.app");
-
-    driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    app.init();
   }
 
-  @AfterMethod(enabled = false)
+  @AfterSuite(enabled = true)
   public void tearDown() {
-    driver.quit();
+    app.stop();
   }
 
-  public boolean isElementPresent(By locator) {
-    return driver.findElements(locator).size() > 0;
-  }
 }

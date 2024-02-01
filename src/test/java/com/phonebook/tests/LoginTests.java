@@ -5,34 +5,33 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class CreateAccountTests extends TestBase {
+public class LoginTests extends TestBase {
 
-  //precondition : user should be log out
-  // if login link not present
-  //click on the Login link
-
-  //enter email
-  //enter password
-  //click on the Registration button
-  //assert: Sign out button is present
 
   @BeforeMethod
   public void ensurePrecondition() {
-
     if (!app.getUser().isLoginLinkPresent()) {
       app.getUser().clickOnSignOutButton();
     }
+
   }
 
-
-  @Test
-  public void registerExistedUserNegativeTest() {
-
+  @Test(priority = 1)
+  public void loginPositiveTest() {
     app.getUser().clickOnLoginLink();
     app.getUser().fillLoginRegisterForm(new User()
         .setMail("ssd@gm.com")
-        .setPassword( "Ssdir123$"));
-    app.getUser().clickOnRegisterButton();
+        .setPassword("Ssdir123$"));
+    app.getUser().clickOnLoginButton();
+
+    Assert.assertTrue(app.getUser().isSignOutButtonPresent());
+  }
+  @Test(priority = 2)
+  public void loginNegativeTestWithoutEmail() {
+    app.getUser().clickOnLoginLink();
+    app.getUser().fillLoginRegisterForm(new User()
+        .setPassword("Ssdir123$"));
+    app.getUser().clickOnLoginButton();
 
     Assert.assertTrue(app.getUser().isAlertAppears());
   }
